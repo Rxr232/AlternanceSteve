@@ -1,3 +1,7 @@
+// Sélection des éléments de navigation et du bouton "back-to-top"
+const navLinks = document.querySelectorAll('nav ul li a');
+const backToTopButton = document.querySelector('.back-to-top');
+
 // Fonction pour le défilement fluide
 navLinks.forEach(link => {
     link.addEventListener('click', function (event) {
@@ -13,7 +17,6 @@ navLinks.forEach(link => {
         }
     });
 });
-
 
 // Fonction pour revenir en haut de la page
 backToTopButton.addEventListener('click', function () {
