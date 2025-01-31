@@ -1,0 +1,285 @@
+/* Couleurs principales */
+:root {
+    --primary-color: #230C0F; /* pour le texte */
+    --secondary-color: #FCFAF9; /* pour les arrière-plans */
+    --accent-color: #88498F; /* les liens et boutons */
+    --background-color: #CBA328; /* pour les arrière-plans secondaires */
+}
+
+/* Police */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* En-tête */
+header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 20px;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+header nav ul li {
+    margin-right: 20px;
+}
+
+header nav ul li a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    color: var(--accent-color);
+}
+
+header h1 {
+    margin: 0;
+}
+
+.logo-space {
+    width: 100px;
+    height: 50px;
+    background-color: #555;
+}
+
+/* Sections */
+section {
+    padding: 40px 20px;
+    margin: 20px 0;
+}
+
+section h1, section h2, section h3 {
+    color: var(--primary-color);
+}
+
+section#accueil {
+    background-color: var(--background-color);
+    text-align: center;
+    padding: 60px 20px;
+}
+
+section#apropos {
+    background-color: var(--secondary-color);
+}
+
+section#projets {
+    background-color: var(--background-color);
+}
+
+section#projets .projet {
+    background-color: var(--secondary-color);
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+section#projets .projet img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+section#projets .projet h3 {
+    margin-top: 10px;
+}
+
+section#projets .projet p {
+    color: #666;
+}
+
+/* Pied de page */
+footer {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    text-align: left;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+.footer > p {
+padding-left: 12px;
+}
+
+footer h3 {
+    margin-left: 8px; /* Use margin instead of padding */
+}
+
+.footer-content > div { /* Target direct children of .footer-content */
+
+    flex-basis: 20%; /* Or a specific width like width: 200px; */
+}
+
+.contact-info, .social-icons {
+    margin: 10px;
+}
+
+.social-icons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.social-icons a {
+    color: var(--secondary-color);
+    margin: 5px 0;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: var(--accent-color);
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: row; /* On garde l'affichage en ligne pour le header */
+        justify-content: space-between; /* On s'assure que les éléments sont bien répartis */
+        align-items: center; /* On centre verticalement les éléments */
+    }
+
+    header nav ul {
+        flex-direction: column; /* Les liens de navigation sont en colonne */
+    }
+
+    header nav li {
+        margin: 5px 0; /* Ajustement des marges pour les liens de navigation */
+    }
+
+    .logo {
+        float: none; /* On supprime le float */
+        display: block; /* Le logo occupe toute la largeur disponible */
+        margin: 0 auto; /* On centre le logo horizontalement */
+        width: 80px; /* Taille du logo sur mobile */
+        height: 80px;
+    }
+
+    section {
+        padding: 20px 10px; /* Reduce padding for sections */
+    }
+
+    section#accueil {
+        padding: 40px 10px; /* Adjust padding for the accueil section */
+    }
+
+    .projet {
+        padding: 10px;  /* Reduce padding in project boxes */
+    }
+
+    .footer-content {
+        flex-direction: column; /* Stack footer content */
+        align-items: center; /* Center footer content */
+    }
+
+    .footer-content > div { /* Target direct children of .footer-content */
+        padding: 10px 0; /* Add top/bottom padding for stacked divs */
+        text-align: center; /* Center text within footer divs */
+        min-width: auto; /* Reset min-width, let content determine width */
+        width: 100%; /* Make sure the footer elements take full width */
+        box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    }
+
+    .other-links {
+        align-items: center; /* Center the other links */
+        padding-left: 0; /* Remove left padding */
+    }
+
+    .other-links a {
+        margin: 5px 0; /* Adjust margins */
+    }
+
+
+}
+
+.logo {
+    float: right;
+    width: 100px;
+    height: 100px;
+    margin-top: 10px;
+    position: sticky;
+    top: 20px;
+    border-radius: 50%;
+    border: 1px solid #241C16;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.logo:hover {
+    box-shadow:
+        0 0 5px #fff,
+        0 0 10px #fff,
+        0 0 20px #fff,
+        0 0 40px #3d2f26,
+        0 0 80px #3d2f26,
+        0 0 90px #3d2f26,
+        0 0 100px #3d2f26,
+        0 0 150px  #3d2f26;
+}
+
+.other-links {
+    display: flex;
+    flex-direction: column; /* Change to column */
+    align-items: flex-start; /* Align items to the start of the container */
+    margin-top: 20px;
+    text-decoration: none;
+    padding-left:10px;
+    
+}
+
+.other-links a {
+    margin-bottom: 5px; /* Add some spacing between links */
+    color: var(--secondary-color); /* Inherit color from footer */
+    text-decoration: none; /* Remove underlines from links */
+}
+
+.other-links a:hover {
+    color: var(--accent-color); /* Apply hover color */
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+    z-index: 1000; /* Ensure it's above other elements */
+}
+
+.back-to-top:hover {
+    opacity: 1;
+    color: var(--accent-color)
+}
+
+.back-to-top i { /* Style the icon itself */
+    font-size: 20px; /* Adjust as needed */
+}
+
+/* ... (rest of your CSS) ... */
